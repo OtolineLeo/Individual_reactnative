@@ -1,20 +1,27 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import { View, Image } from "react-native";
+import { styles } from './styles';
+import g2 from './gaming2.avif';
+import icon3 from './icons8.png';
+import iconPesq from './iconPesquisar.png';
+import iconSac from './iconSacola.png';
+import capa from './capa.jpeg';
+import carrosel from './carrosel.png';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Vasco Principal</Text>
-      <StatusBar style="auto" />
+const App = () =>{
+
+  return <View style={styles.container}>
+    <View style={styles.newContainer}>
+      <Image source={icon3} style={styles.icon} />
+      <Image source={g2} style={styles.pic} />
+        <View style={styles.test}>
+          <Image source={iconPesq} style={styles.icon2} />
+          <Image source={iconSac} style={styles.icon2} />
+        </View>
     </View>
-  );
+          <Image source={capa} style={styles.capa} />
+          <Image source={carrosel} style={styles.carrosel} />
+    </View>
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
